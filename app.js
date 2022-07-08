@@ -14,10 +14,6 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//config view engine 
-configViewEngine(app);
-initWebRoutes(app);
-initCronJob();
 
 //127.0.0.1:27017/todoListDB
 mongodb: mongoose.connect(
@@ -137,7 +133,6 @@ if(port==null || port=="")
 {
   port =3000;
 }
-app.listen(port);
 
 app.listen(port, function () {
   console.log("server is listening at Port 3000");

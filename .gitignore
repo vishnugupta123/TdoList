@@ -1,4 +1,1 @@
-/node-modules
-npm-debug.log 
-.DS-Store
-/*.env
+node_modules/*
